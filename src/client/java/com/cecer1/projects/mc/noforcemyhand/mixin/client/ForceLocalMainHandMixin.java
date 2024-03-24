@@ -19,7 +19,7 @@ abstract class ForceLocalMainHandMixin extends LivingEntity {
 	}
 
 	@Inject(method = "getMainArm", at = @At("HEAD"), cancellable = true)
-	public void getMainAram(CallbackInfoReturnable<Arm> cir) {
+	public void forceMainArmForSelf(CallbackInfoReturnable<Arm> cir) {
 		MinecraftClient client = MinecraftClient.getInstance();
 		//noinspection ConstantValue
 		if ((Object)this == client.player) {
