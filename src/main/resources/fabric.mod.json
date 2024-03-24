@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "noforcemyhand",
+	"version": "${version}",
+	"name": "NoForceMyHand",
+	"description": "Forces your main hand to also match your client settings. Even if the server says otherwise.",
+	"authors": [
+		"Cecer"
+	],
+	"contact": {
+		"email": "noforcemyhand@cecer1.com",
+		"issues": "https://github.com/CecerMCProjects/NoForceMyHand/issues",
+		"sources": "https://github.com/CecerMCProjects/NoForceMyHand",
+		"homepage": "https://www.cecer1.com/projects/noforcemyhand/"
+	},
+	"icon": "assets/noforcemyhand/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.cecer1.projects.mc.noforcemyhand.NoForceMyHandClient"
+		]
+	},
+	"mixins": [
+		"noforcemyhand.mixins.json",
+		{
+			"config": "noforcemyhand.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.1",
+		"java": ">=17"
+	}
+}
